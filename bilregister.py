@@ -1,44 +1,45 @@
 class Car():
-   '''
-   En klass som håller reda på några egenskaper hos en bil.
-   '''
-   # Metoden __init__, körs alltid då ett objekt skapas
-   def __init__(self, brand, color, mileage):
-      # Nedanstående variabler kallas för attribut.
-      # Alla objekt av klassen Car har egna värden på dessa.
-      self.brand = brand
-      self.color = color
-      self.mileage = mileage
+    
+    def __init__(self, brand, color, mileage):
+     
+       self.brand = brand
+       self.color = color
+       self.mileage = mileage
 
-   def set_color(self, new_color):
-       self.color = new_color
-       print(a_car.color)
+    def brand(self):
+     
+       print(self.brand)
 
-   def get_brand(self):
-      '''
-      Skriver ut bilmärket
-      '''
-      print(self.brand)
+    def setbrand(self, new_brand):
+     
+       self.brand = new_brand
 
-   def set_brand(self, new_brand):
-      '''
-      Parameter: new_brand | sträng
-      Uppdaterar bilmärket om det existerar. Om det inte existerar
-      så tilldelas aktuellt objekt märket enligt parametern.
-      '''
-      self.brand = new_brand
+    def color(self, new_color):
+        self.color = new_color
 
-# ----------Huvudprogram----------
-# Nu när klassen finns kan vi skapa objekt (variabler) med denna typ.
-# Dessa objekt har också tillgång till klassens metoder (funktioner).
+    def get_mileage(self):
+        print(self.mileage)
+
+
+
 a_car = Car('Volvo', 'Blå', 1587)
-a_car.get_brand()
-a_car.set_brand('Renult')
-a_car.get_brand()
-a_car.set_color('Purple')
+#a_car.get_brand()
 
-b_car = Car('Hyundai', 'Röd', 1345)
-b_car.get_brand()
-b_car.set_brand('Woltswagen')
-b_car.get_brand()
-b_car.set_color('Blue')
+b_car = Car('Wolwo', 'Röd', 1000)
+#b_car.get_brand()
+
+c_car = Car('Taxi', 'Gul', 3000)
+#c_car.get_brand()
+
+d_car = Car('Tesla','Grön', 4000)
+#d_car.get_brand()
+
+my_cars = [a_car, b_car, c_car, d_car]
+
+
+for car in my_cars:
+    print(car.brand, car.mileage, car.color)
+
+
+
+    
